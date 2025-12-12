@@ -61,14 +61,38 @@
         Navegador não suporta o formato do video. <a href="video/video_MP4.mp4">Clique aqui para baixar o video!</a>
     </video>
     <section>
-        <h2>Contato</h2>
+        <h2>Orçamento</h2>
         <form method="get" action="">
-            <label for="">Nome</label><br>
-            <input type="text" name="name"><br><br>
-            <label for="">Email</label><br>
-            <input type="email" name="email"><br><br>
+            <fieldset>
+                <legend>Dados da Viagem</legend>
+                <label for="">Nome</label><br>
+                <input type="text" required name="name"><br><br>
+
+                <label for="">Email</label><br>
+                <input type="email" required name="email"><br><br>
+
+                <label>Data de Ida</label><br>
+                <input type="date" required name="departureDate"><br><br>
+
+                <label>Data de Volta</label><br>
+                <input type="date" required name="returnDate"><br><br>
+
+                <label>Quantidades de Pessoas</label><br>
+                <input type="number" required name="numberPeople"><br><br>
+
+            </fieldset>
+
+            <fieldset>
+                <legend>Quais Serviços você deseja contrata?</legend>
+                <label><input type="checkbox" name="tickets" value="Tickets">Compra de Passagem<br></label>
+                <label><input type="checkbox" name="accommodation" value="Accommodation">Reserva de
+                    Hospedagem<br></label>
+                <label><input type="checkbox" name="carRental" value="CarRental">Reserva de Veiculos</label>
+            </fieldset>
+
             <label>Comentario</label><br>
             <textarea rows="5"></textarea><br><br>
+
             <button>Salvar</button>
         </form>
     </section>
