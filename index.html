@@ -5,18 +5,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>A VIAGEM DOS SONHOS</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
     <header>
-        <h1>VENHA REALIZAR A VIAGEM DOS SEUS SONHOS</h1>
+        
         <nav>
             <ul>
-                <li>Pacotes</li>
-                <li>Taxas</li>
-                <li>Contatos</li>
+                <li><a href="#">Pacotes</a></li>
+                <li><a href="#">Taxas</a></li>
+                <li><a href="#">Contatos</a></li>
             </ul>
         </nav>
+        <h1>Venha Realizar a Viagem dos Seus Sonhos</h1>
     </header>
     <section>
         <h2>Conheça nossos pacotes</h2>
@@ -62,7 +64,7 @@
     </video>
     <section>
         <h2>Orçamento</h2>
-        <form method="get" action="">
+        <form method="get" action="" target="_self      ">
             <fieldset>
                 <legend>Dados da Viagem</legend>
                 <label for="">Nome</label><br>
@@ -90,6 +92,23 @@
                 <label><input type="checkbox" name="carRental" value="CarRental">Reserva de Veiculos</label>
             </fieldset>
 
+            <fieldset>
+                <legend>Escolha uma forma de pagamento:</legend>
+                <input type="radio" name="paymentMethod" value="CredicCard">Cartão de Crédito<br>
+                <input type="radio" name="paymentMethod" value="DebitCard">Cartão de Dèbito<br>
+                <input type="radio" name="paymentMethod" value="Pix">Pix<br>
+                <input type="radio" name="paymentMethod" value="BackSlip">Boleto Bancario
+            </fieldset>
+
+            <fieldset>
+                <legend>Escolha o prazo de pagamento</legend>
+                <select name="paymentTerms">
+                    <option value="The View">A vista</option>
+                    <option value="5x">5x</option>
+                    <option value="10x" selected>10x with interest </option>
+                </select>
+            </fieldset>
+
             <label>Comentario</label><br>
             <textarea rows="5"></textarea><br><br>
 
@@ -100,7 +119,7 @@
 
         <h2>Tabela de Taxas</h2>
         <p>Veja nossas taxas de serviços</p>
-        <table style="width: 100%" border="1px">
+        <table>
             <caption>Descrição de Serviços e repectivos valores</caption>
             <thead>
                 <tr>
