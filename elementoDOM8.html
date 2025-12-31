@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo dom 7</title>
+</head>
+
+<body>
+    <form>
+        <label for="email">Email:</label>
+        <input type="email" id="email" placeholder="Digite seu email">
+        <br><br>
+        <label for="senha">Senha:</label>
+        <input type="password" id="senha" placeholder="Digite sua senha">
+
+        <button type="submit">Enviar</button>
+    </form>
+    <script>
+        function validarFormulario(event) {
+            var email = document.getElementById("email").value;
+            var senha = document.getElementById("senha").value;
+            var mensagemErro = "";
+
+            if (!email.includes("@")) {
+                mensagemErro += "Email inválido. ";
+            }
+            if (email.trim() === "") {
+                mensagemErro += "Email não pode estar vazio. ";
+            }
+            if (senha.length < 6) {
+                mensagemErro += "Senha deve ter pelo menos 6 caracteres.";
+            }
+
+            if (mensagemErro) {
+                event.preventDefault();
+                alert(mensagemErro);
+            }
+        }
+        document.querySelector("form").addEventListener("submit", validarFormulario);
+    </script>
+</body>
+
+</html>
