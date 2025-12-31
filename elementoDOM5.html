@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>exemplo DOM 5</title>
+    </head>
+    <body>
+        <ul id="minhaLista">
+
+        </ul>
+
+        <ul id="listaTime">
+
+        </ul>
+    </body>
+    <script>
+    var element = document.createElement("div");
+    element.innerText = "Este é um elemento div criado dinamicamente!";
+    element.style.color = "blue";
+    document.body.appendChild(element);
+
+    var listItem = document.getElementById("minhaLista");
+    var li = document.createElement("li");
+    li.textContent = "Quem somos";
+    listItem.appendChild(li);
+
+    time = ["Flamengo", "Vasco", "Botafogo", "Fluminense"];
+    var listaTime = document.getElementById("listaTime");
+
+    for(var i = 0; i < time.length; i++){
+        var liTime = document.createElement("li");
+        liTime.innerText = time[i];
+        liTime.style.border = "1px solid blue";
+        listaTime.appendChild(liTime);
+    }
+</script>
+</html>
