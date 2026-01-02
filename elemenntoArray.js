@@ -60,3 +60,35 @@ for (var i = 0; i < numeros.length; i++) {
 
 console.log("Array original: " + numeros);
 console.log("Array com apenas números positivos: " + positivos);
+
+var pessoa = ["joao", "Pedro", "Maria", "Ana", "Carla"];
+var gerente = ["david", "marcos"];
+// clonar a array
+pessoas1 = pessoa.slice(1, 3);
+console.log(pessoas1);
+console.log(pessoa);
+
+var empresa = pessoa.concat(gerente);
+console.log(empresa);
+
+var meses = [
+  "Janeiro",
+  "Fevereiro",
+  "Março",
+  "Abril",
+  "Maio",
+  "Junho",
+  "Julho",
+  "Agosto",
+  "Setembro",
+  "Outubro",
+  "Novembro",
+  "Dezembro",
+];
+
+for (var i = 1; i < 5; i++) {
+  var trimestre = i;
+  var inicio = (trimestre - 1) * 3;
+  var fim = inicio + 3;
+  console.log([trimestre] + "º trimestre: " + meses.slice(inicio, fim));
+}
