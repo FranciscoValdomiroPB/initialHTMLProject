@@ -24,3 +24,11 @@ function Person(first, last) {
 var personTwo = new Person("Alice", "Johnson");
 console.log(personTwo.firstName); 
 console.log(personTwo.lastName); 
+
+
+function multiply(a, b) {
+  return a * b;
+}
+
+var result = multiply(4, 5);
+console.log(result);
